@@ -7,22 +7,22 @@ using namespace std;
 class Serial
 {
 private:
-    int number;
-    static int count;
+    int number;             // Serial Number
+    static int count;       // Count of current object
 public:
-    Serial(): number(0)
+    Serial(): number(0)     // Constructor
     {
-        count++;
-        number = count;
+        count++;            // Each time an object is created the count increments
+        number = count;     // The number of the object is the current count
     }
 
-    int getNumber()
+    int getNumber()         // Function allows object to report its number
     {
         return number;
     }
 };
 
-int Serial::count = 0;
+int Serial::count = 0;      // Initializes count to 0
 
 // Prototypes
 void ShowSerial(Serial srl);
@@ -40,7 +40,7 @@ int main()
 }
 
 // Function Definitions
-void ShowSerial(Serial srl)
+void ShowSerial(Serial srl) // Takes class "Serial" and displays the objects number
 {
     cout << "I am object number " << srl.getNumber() << endl;
 }
