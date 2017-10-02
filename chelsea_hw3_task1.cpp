@@ -4,7 +4,19 @@
 #include <iostream>
 using namespace std;
 // Constants, Classes, Structures
+class Date
+{
+private:
+    int month;
+    int day;
+    int year;
+public:
+    void get_date()
+    {
+        cin >> month >> day >> year;
+    }
 
+};
 
 // Prototypes
 
@@ -12,7 +24,13 @@ using namespace std;
 // Main Program Program
 int main()
 {
+    Date d1, d2;
 
+    cout << "Enter a date (format 12/31/99): ";
+    d1.get_date();
+
+    cout << "Enter another date: ";
+    d2.get_date();
 
     return 0;
 }
