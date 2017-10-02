@@ -10,10 +10,11 @@ private:
     int month;
     int day;
     int year;
+    char slash;         // Char variable to allow input of '/' inside the date input
 public:
     void get_date()
     {
-        cin >> month >> day >> year;
+        cin >> month >> slash >> day >> slash >> year;
     }
 
     void show_date(int num)
@@ -36,6 +37,8 @@ int main()
 
     cout << "Enter another date: ";
     d2.get_date();
+
+    cout << endl;
 
     d1.show_date(1);
     d2.show_date(2);
