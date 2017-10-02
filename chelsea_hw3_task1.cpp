@@ -16,6 +16,11 @@ public:
         cin >> month >> day >> year;
     }
 
+    void show_date(int num)
+    {
+        cout << "date" << num << " = " << month << "/"
+             << day << "/" << year << endl;
+    }
 };
 
 // Prototypes
@@ -31,6 +36,9 @@ int main()
 
     cout << "Enter another date: ";
     d2.get_date();
+
+    d1.show_date(1);
+    d2.show_date(2);
 
     return 0;
 }
